@@ -26,6 +26,7 @@ namespace DogWrapperApi.Repository
             _logger = logger;
         }
 
+        //Cache Dog details in SQL Table
         public async Task<IEnumerable<Breed>> GetBreedByNameAsync(string breed)
         {
             try
@@ -37,7 +38,7 @@ namespace DogWrapperApi.Repository
 
                 using (var connection = _context.CreateConnection())
                 {
-
+                    // SP to check dog detail in db if exist return else insert 
                     var parameters = new { breed_name = dog_breed.ToLower(), image_path = dog_image_path };
                     var apiResponse = await connection.QueryAsync<Breed>("usp_DogsBreed", parameters, commandType: System.Data.CommandType.StoredProcedure);
                     return apiResponse;
@@ -51,6 +52,7 @@ namespace DogWrapperApi.Repository
             }
         }
 
+        //Get Dog details From https://dog.ceo/
         private async Task<string> DogBreedExternalAPI(string breed)
         {
 

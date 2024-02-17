@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DogWrapperApiTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e35d241ff72d2b8666e193cf49ad360b43e46ae9")]
 [assembly: System.Reflection.AssemblyProductAttribute("DogWrapperApiTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DogWrapperApiTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
