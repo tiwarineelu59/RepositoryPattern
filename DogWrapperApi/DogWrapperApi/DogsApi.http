@@ -1,0 +1,6 @@
+@DogWrapperApi_HostAddress = http://localhost:5005
+
+GET {{DogWrapperApi_HostAddress}}/Breed/{dog_breed_name}
+Accept: application/json
+
+###
