@@ -1,5 +1,6 @@
 ﻿using DogWrapperApi.Contracts;
 using DogWrapperApi.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -19,7 +20,8 @@ namespace DogWrapperApi.Controllers
             _logger = logger;
         }
 
-        // GET api/<DogsBreedController>/rottweiler
+        //[Authorize] to Use Authorization configure Issuer, Audience IssuerSigningKey in Program.cs
+        // GET api/<DogsBreedController>/saluki
         [HttpGet("{breed}")]
         public async Task<IActionResult> GetDogBreed(string breed) 
         {
